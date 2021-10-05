@@ -8,32 +8,38 @@ import './layout.css'
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+      query MyQuery {
+        allRemoteCsv {
+          nodes {
+            ar
+            bil
+            drivmedel
+            id
+            kaross
+            omrade
+            ort
+            prisKrMilIngaTillagg
+            bildBak
+            bildFram
+            tillbehor
+            tillgangligForNyaAvtal
+            vaxellada
+            klimatindexEndastForBilarHogst10ArGamla
           }
         }
       }
     `}
     render={(data) => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {children}
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
+        { 
+          data.allRemoteCsv.nodes.map( (car) => (
+              <div>
+                {car.bil}
+                <img src={car.bildFram} width={480} />
+              </div>
+            )
+          )
+        }
       </>
     )}
   />

@@ -7,6 +7,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-remote-csv`,
+      options: {
+        url: `https://docs.google.com/spreadsheets/d/e/2PACX-1vTXfklaECQxv5ghVSr2E3vUF9KZ41SOffV1vu2EInGs1VfsXMHlyZCr0RoO6rGN9XJbjQDdgAs5oYa9/pub?gid=0&single=true&output=csv`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
