@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-source-remote-csv`,
       options: {
-        url: `https://docs.google.com/spreadsheets/d/e/2PACX-1vTXfklaECQxv5ghVSr2E3vUF9KZ41SOffV1vu2EInGs1VfsXMHlyZCr0RoO6rGN9XJbjQDdgAs5oYa9/pub?gid=0&single=true&output=csv`,
+        url: `https://docs.google.com/spreadsheets/d/e/2PACX-1vQCSjp-GzSG-Z5QLZU46LlFwvjVpH0a_vsTmR0NsFfQf0ui6ri-MwSKJ4ys9MQZtjDJuW9cAD68xJV8/pub?gid=366925868&single=true&output=csv`,
       },
     },
     {
